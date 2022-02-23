@@ -153,7 +153,7 @@ contract ERC20Rewards is AccessControl, ERC20Permit {
 
     /// @dev Claim all rewards from caller into a given address
     function claim(address to)
-        external
+        external virtual
         returns (uint256 claiming)
     {
         _updateRewardsPerToken();
